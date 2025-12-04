@@ -7,15 +7,14 @@
 
 #container {
     position: absolute;  
-    top: 12%;                 
+    top: 11.5%;                 
     left: 50%;                  
     transform: translateX(-50%); 
-    width: 50%;                  
-    height: 40%;                
+    width: 54.5%;                  
+    height: 68%;                
     background-color: lightblue;
     overflow: auto;
 }
-
 
 
 #logo_section {
@@ -66,12 +65,16 @@ main {
 }
 
 footer {
-    background-color: #333;
-    color: #fff;
-    padding: 1rem;
-    text-align: center;
-    margin-top: auto;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #333;
+  color: #fff;
+  padding: 1rem;
+  text-align: center;
 }
+
 
 .center_title {
     font-size: 2rem;
@@ -85,12 +88,16 @@ footer {
 }
 
 #background_image {
-    position: relative;
-    background-image: url('../images/background.png');
-    background-color: #0f0f0f;
-    background-size: contain;
-    background-position: center;
-    background-repeat: no-repeat;
-    min-height: 100vh;
-    background-attachment: fixed;
+  position: relative;
+  background-color: #0c0c0c;
+  background-size: contain;
+  background-position: center top;
+  margin: auto;
+}
+
+#computer_bg {
+  width: 92%;
+  height: auto;
+  display: block;
+  margin: auto;
 }
