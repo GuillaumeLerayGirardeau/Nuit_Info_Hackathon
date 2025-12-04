@@ -1,1 +1,1 @@
-Branch test of Maï
+Branch test of Maï.
