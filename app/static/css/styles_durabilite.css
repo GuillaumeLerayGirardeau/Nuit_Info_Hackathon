@@ -58,3 +58,19 @@ body {
 #gagne.visible {
     max-height: fit-content;
 }
+
+#demarches {
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-right: auto;
+    width: fit-content;
+    text-align: left;
+}
+
+#conclusion {
+    margin-top: 40px;
+    margin-left: 20px;
+    margin-right: auto;
+    width: fit-content;
+    text-align: left;
+}
