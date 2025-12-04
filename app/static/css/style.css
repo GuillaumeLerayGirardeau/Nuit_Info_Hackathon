@@ -1,0 +1,82 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Container pour afficher le site dans un carré
+#container {
+  width: 130vmin;
+  height: 80vmin;
+  margin: auto;
+  background-color: lightblue;
+}
+*/
+
+#logo_section {
+    position: sticky;
+    top: 0;
+    background-color: #438eda;
+    color: #fff;
+    padding: 1rem;
+}
+
+#navbar_section {
+    background-color: #89919a;
+    padding: 0.5rem;
+    border: 2px solid #333;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+}
+
+nav a {
+    position: relative;
+    color: #fff;
+    text-decoration: none;
+    margin-left: 1rem;
+    display: inline-block;
+    margin-right: 20px;
+}
+
+#header_logo {
+    width: 20%;
+    max-width: 300px;
+    height: auto;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+main {
+    flex: 1;
+    padding: 2rem;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 1rem;
+    text-align: center;
+    margin-top: auto;
+}
+
+.center_title {
+    font-size: 2rem;
+    text-align: center;
+    margin: 0.7rem;
+}
+
+.rainbow_text {
+    font-size: 5rem;
+    margin-bottom: 3rem;
+}

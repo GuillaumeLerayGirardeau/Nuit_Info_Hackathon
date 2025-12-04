@@ -3,13 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <title>NIRD - Home</title>
 </head>
 <body>
-    {% include 'header.html' %}
-
-    <p>Le site marche !</p>
-
+    <div id="container">
+        {% include 'header.html' %}
+        <main>
+            <div class="center_title">
+                <h2>La démarche</h2>
+                <h2 class="rainbow_text">
+                    <span style="color: #2596be">N</span>
+                    <span style="color: #d164c3">I</span>
+                    <span style="color: #e88aa6">R</span>
+                    <span style="color: #f9ce59">D</span>
+                </h2>
+            </div>
+            <div>
+                <article>
+                    <p>Bienvenue, toi ! Oui, toi qui utilise un ordinateur, un téléphone, et sûrement tout un tas d'autres appareils
+                        électroniques ! <br>Voici les clé nele sperds pas
+                    </p>
+                </article>
+            </div>
+    
+        </main>
+    </div>
+    <!--Ajouter le footer dans le container lors du passage en carré-->
     {% include 'footer.html' %}
     <script src="{{ url_for('static', filename='js/scripts.js') }}"></script>
 </body>
