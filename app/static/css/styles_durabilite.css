@@ -1,0 +1,60 @@
+body {
+    text-align: center;
+}
+
+#game {
+    width: 300px;
+    height: 200px;
+    background-color: blue;
+    position: relative;
+    margin-left: 40%;
+}
+#ordinateur {
+    width: 20px;
+    height: 20px;
+    background-color: black;
+    border: 1px;
+    border-radius: 2px;
+    cursor: grab;
+    margin-top: 10px;
+    position: absolute;
+    bottom: 5px;
+    left: 45%;
+}
+
+#reparation {
+    width: 50px;
+    height: 50px;
+    background-color: aqua;
+    position: absolute;
+    top: 5px;
+    left: 25px;
+}
+
+#poubelle {
+    width: 50px;
+    height: 50px;
+    background-color: blueviolet;
+    position: absolute;
+    margin-left: 5px;
+}
+
+.top {
+    top: 5px;
+    right: 25px;
+}
+
+.bottom {
+    bottom: 5px;
+    right: 25px;
+}
+
+#gagne {
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.6 ease;
+}
+
+#gagne.visible {
+    max-height: fit-content;
+}

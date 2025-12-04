@@ -22,4 +22,8 @@ def create_app():
     def home():
         return render_template('index.html')
     
+    @app.route('/durabilite')
+    def durabilite():
+        return render_template('durabilite.html')
+    
     return app
