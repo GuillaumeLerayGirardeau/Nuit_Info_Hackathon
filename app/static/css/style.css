@@ -5,17 +5,20 @@
     font-family: Arial, sans-serif;
 }
 
-/* Container pour afficher le site dans un carré
 #container {
-  width: 130vmin;
-  height: 80vmin;
-  margin: auto;
-  background-color: lightblue;
+    position: absolute;  
+    top: 12%;                 
+    left: 50%;                  
+    transform: translateX(-50%); 
+    width: 50%;                  
+    height: 40%;                
+    background-color: lightblue;
+    overflow: auto;
 }
-*/
+
+
 
 #logo_section {
-    position: sticky;
     top: 0;
     background-color: #438eda;
     color: #fff;
@@ -79,4 +82,15 @@ footer {
 .rainbow_text {
     font-size: 5rem;
     margin-bottom: 3rem;
+}
+
+#background_image {
+    position: relative;
+    background-image: url('../images/background.png');
+    background-color: #0f0f0f;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    background-attachment: fixed;
 }
