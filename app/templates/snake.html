@@ -4,43 +4,36 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles_durabilite.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles_snake.css') }}">
 </head>
 <body>
     <div id="background_image">
         <img src="{{ url_for('static', filename='images/background.png') }}" id="computer_bg" alt="Ordinateur">
         <div id="container">
-            {% include 'header.html' %}
+            <div>
+                <header>
+                    <a href="/index"><button>Accueil</button></a>
+                </header>
+            </div>
             <main>
-                <div>
-                    <h1>SNAKE !!</h1>
-                </div>
-                <div id="game">
-                    <div id="poubelle", class="top"></div>
-                    <div id="reparation", class="reparation"></div>
-                    <div id="ordinateur", class="ordinateur", draggable="true"></div>
-                </div>
-                <div id="gagne">
-                    <h2>Vous pouvez le reconditionner ou passer sous Linux !</h2>
-                    <p>bla bla bla linux trop bien</p>
-                    <div id="demarches">
-                        <h3>Les démarches:</h3>
-                        <h4>Reconditionnement des appareils:</h4>
-                        <p></p>
-                        <h4>Linux</h4>
-                        <p></p>
-                        <h4>Autre</h4>
-                        <p></p>
+                <div id="wrap">
+                    <canvas id="snake_game" width="400" height="400">
+                        Votre navigateur ne supporte pas le canvas.
+                    </canvas>
+                    <div id="panel">
+                        <div>
+                            <h1>SNAKE !!</h1>
+                        </div>
+                    <button id="restart">Recommencer</button>
+                    <p>Contrôles: Flèches.</p>
+                    <p id="game_over" class="hidden">Game Over !</p>
                     </div>
-                    <div id="conclusion">
-                        <h3>Conclusion</h3>
-                        <p>blablabla</p>
-                    </div>
+                </div>
+
                 </div>
             </main>
-            {% include 'footer.html' %}
         </div>
     </div>
-    <script src="{{ url_for('static', filename='js/scripts_durabilite.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/scripts_snake.js') }}"></script>
 </body>
 </html>
