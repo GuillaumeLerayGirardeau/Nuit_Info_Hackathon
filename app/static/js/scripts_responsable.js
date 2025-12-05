@@ -4,35 +4,65 @@ import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
 
 const iw = window.innerWidth;
 const ih = window.innerHeight;
-const viewer = document.getElementById("viewer_stl")
+const viewer = document.getElementById("viewer_stl");
+const viewerdemo = document.getElementById("viewer_demo");
 
 // Créer une scène qui contiendra tous les éléments à afficher
 const scene = new THREE.Scene();
+const scenedemo = new THREE.Scene();
 
 // Créer une caméra
 const camera = new THREE.PerspectiveCamera(70, viewer.clientWidth/viewer.clientHeight, 0.1, 1000);
 camera.position.set(0, 0, 10);
+const camerademo = new THREE.PerspectiveCamera(70, viewer.clientWidth/viewer.clientHeight, 0.1, 1000);
+camerademo.position.set(0, 0, 10);
 
 // Ajoute une lumière
 const light = new THREE.PointLight(0xeeeeee, 5000);
 light.position.set(0, 0, 100);
+const lightdemo = new THREE.PointLight(0xeeeeee, 5000);
+lightdemo.position.set(0, 0, 100);
 scene.add(light);
+scenedemo.add(lightdemo);
 
 const ambientLight = new THREE.AmbientLight(0x404040, 8);
+const ambientLightdemo = new THREE.AmbientLight(0x404040, 8);
 scene.add(ambientLight);
+scenedemo.add(ambientLightdemo);
 
 // Créer le moteur de rendu
 const renderer = new THREE.WebGLRenderer({antialias: true});
 renderer.setSize(viewer.clientWidth, viewer.clientHeight);
 viewer.appendChild(renderer.domElement);
 
+const rendererdemo = new THREE.WebGLRenderer({antialias: true});
+rendererdemo.setSize(viewer.clientWidth, viewer.clientHeight);
+viewerdemo.appendChild(rendererdemo.domElement);
+
 const controls = new OrbitControls(camera, renderer.domElement);
+const controlsdemo = new OrbitControls(camerademo, rendererdemo.domElement);
+
+// importe objet demo
+const loader = new STLLoader();
+loader.load('/static/stl_file/monkey.stl', (geometry) => {
+    //const text = new THREE.TextureLoader().load('/stl_file/cat_text.jpg');
+    const material = new THREE.MeshStandardMaterial({color: 0xffffffff});
+    const monkey_mesh = new THREE.Mesh(geometry, material);
+
+    monkey_mesh.scale.set(3, 3, 3);
+    monkey_mesh.position.set(0, 0, 0);
+    monkey_mesh.rotation.x += 80;
+
+    scenedemo.add(monkey_mesh)
+})
 
 // Animation
 function animate() {
   requestAnimationFrame(animate);
   controls.update();
+  controlsdemo.update
   renderer.render(scene, camera);
+  rendererdemo.render(scenedemo, camerademo);
 }
 animate();
 

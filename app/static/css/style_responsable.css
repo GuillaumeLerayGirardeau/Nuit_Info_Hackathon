@@ -114,7 +114,13 @@ footer {
     margin: 10px auto;
 }
 
-#viewer_section {
+#viewer_demo {
+    width: 300px;
+    height: 300px;
+    margin: 10px auto;
+}
+
+.viewer_section {
   text-align: center;
   margin: 2rem auto;
 }
