@@ -7,40 +7,47 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='css/styles_durabilite.css') }}">
 </head>
 <body>
-    <main>
-        <div>
-            <h1>Durabilité</h1>
+    <div id="background_image">
+        <img src="{{ url_for('static', filename='images/background.png') }}" id="computer_bg" alt="Ordinateur">
+        <div id="container">
+            {% include 'header.html' %}
+            <main>
+                <div>
+                    <h1>Durabilité</h1>
+                </div>
+                <div>
+                    <p>
+                        Bla bla bla intro
+                    </p>
+                    <h2>Et vous ? Que feriez vous si votre appareil ne pouvez plus recevoir de mises à jour de sécurité?</h2>
+                    <p>Faites glisser l'ordinateur:</p>
+                </div>
+                <div id="game">
+                    <div id="poubelle", class="top"></div>
+                    <div id="reparation", class="reparation"></div>
+                    <div id="ordinateur", class="ordinateur", draggable="true"></div>
+                </div>
+                <div id="gagne">
+                    <h2>Vous pouvez le reconditionner ou passer sous Linux !</h2>
+                    <p>bla bla bla linux trop bien</p>
+                    <div id="demarches">
+                        <h3>Les démarches:</h3>
+                        <h4>Reconditionnement des appareils:</h4>
+                        <p></p>
+                        <h4>Linux</h4>
+                        <p></p>
+                        <h4>Autre</h4>
+                        <p></p>
+                    </div>
+                    <div id="conclusion">
+                        <h3>Conclusion</h3>
+                        <p>blablabla</p>
+                    </div>
+                </div>
+            </main>
+            {% include 'footer.html' %}
         </div>
-        <div>
-            <p>
-                Bla bla bla intro
-            </p>
-            <h2>Et vous ? Que feriez vous si votre appareil ne pouvez plus recevoir de mises à jour de sécurité?</h2>
-            <p>Faites glisser l'ordinateur:</p>
-        </div>
-        <div id="game">
-            <div id="poubelle", class="top"></div>
-            <div id="reparation", class="reparation"></div>
-            <div id="ordinateur", class="ordinateur", draggable="true"></div>
-        </div>
-        <div id="gagne">
-            <h2>Vous pouvez le reconditionner ou passer sous Linux !</h2>
-            <p>bla bla bla linux trop bien</p>
-            <div id="demarches">
-                <h3>Les démarches:</h3>
-                <h4>Reconditionnement des appareils:</h4>
-                <p></p>
-                <h4>Linux</h4>
-                <p></p>
-                <h4>Autre</h4>
-                <p></p>
-            </div>
-            <div id="conclusion">
-                <h3>Conclusion</h3>
-                <p>blablabla</p>
-            </div>
-        </div>
-    </main>
+    </div>
     <script src="{{ url_for('static', filename='js/scripts_durabilite.js') }}"></script>
 </body>
 </html>
