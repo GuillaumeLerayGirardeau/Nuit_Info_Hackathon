@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NIRD - Durabilite</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style_responsable.css') }}">
+    <script type="importmap">
+    {
+    "imports": {
+        "three": "https://cdn.jsdelivr.net/npm/three@v0.180.0/build/three.module.js",
+        "three/addons/": "https://cdn.jsdelivr.net/npm/three@v0.180.0/examples/jsm/"
+        }
+    }
+    </script>
+</head>
+<body>
+    <div id="background_image">
+        <img src="{{ url_for('static', filename='images/background.png') }}" id="computer_bg" alt="Ordinateur">
+        <div id="container">
+            {% include 'header.html' %}
+            <main>
+                <div>
+                    <h1>Responsable</h1>
+                </div>
+                <div>
+                    <p>
+                        Choisir ses logiciels et ses outils technologiques n'est pas aussi anodin que l'on pourrait le penser. 
+                        En effet, nous sommes bien souvent contraint d'accepter les règles des grands groupes de la Big Tech, qui
+                        rendent parfois nos machine obsolètes avant l'heure, et ne sont pas avares en stratagèmes afin de regarder
+                        d'un peu trop près vos données. 
+                    </p>
+                    <p>
+                        Pourtant, il existe quelques alternatives accessible à tous, comme par exemple le choix de l'open-source.
+                    </p>
+                    <h2>Open-Source</h2>
+
+                    <p>
+                        Les projets Open-Sources sont des logiciels, des systèmes d'exploitations, ou pleins d'autres outils dont
+                        le code est ouvert à tous. Tout le monde peut donc contribuer à améliorer et modifier le code. 
+                    </p>
+                    <p>
+                        En encourageant la transparence, l'inclusion et la collaboration, les projets open-source constituent une 
+                        alternative de choix aux grands standards des entreprises de la tech. En plus, bon nombre d'entre eux sont
+                        gratuits ! 
+                    </p>
+                    <p>
+                        Il existe de nombreux outils open-source, dont certains que vous utilisez peut-être: <b>Linux</b>, <b>VLC</b>, ou encore
+                        <b>LibreOffice</b> sont open-source !</p>
+                        
+                    <p> 
+                        Mais il existe aussi des logiciels créatifs open-source, comme <b>Blender</b> ! 
+                    </p>
+
+                    <h3>Blender</h3>
+
+                    <p>
+                        Blender est un logiciel de 3D open-source pouvant créer de véritables films d'animation professionnels.
+                        <br> Eh oui, même votre vieille machine peut faire tourner Blender ! Enfin, tant que vous ne voulez pas
+                        reproduire une ville entière, la plupart les ordinateurs peuvent vous permettre de vous essayer à la
+                        modélisation 3D. 
+                    </p>
+                    <p>
+                        Pourquoi ne pas essayer de visualiser un objet 3D sur cet ordinateur ? <br> Allez, trouvez un objet 3D en STL sur
+                        internet et ouvrez-le ci-dessous !
+                    </p>
+                </div>
+
+                <section id="viewer_section">
+                    <input type="file" id="stl_file" accept=".stl">
+                    <div id="viewer_stl"></div>
+                    <div id="stl_data"></div>
+                </section>
+                
+                <div>
+                    <p>
+                        Plutôt sympa, non ? Et pourquoi ne pas créer vos propres fichiers 3D maintenant ?
+                    </p>
+                    <p>
+                        N'hésitez plus, et lancer-vous dans l'aventure open-source avec Blender !
+                    </p>
+                </div>
+
+            </main>
+        {% include 'footer.html' %}
+        </div>
+    </div>
+    <script type="module" src="{{ url_for('static', filename='js/scripts_responsable.js') }}"></script>
+</body>
+</html>

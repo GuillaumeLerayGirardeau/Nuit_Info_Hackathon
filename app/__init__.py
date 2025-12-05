@@ -26,6 +26,10 @@ def create_app():
     def durabilite():
         return render_template('durabilite.html')
     
+    @app.route('/responsable')
+    def responsable():
+        return render_template('responsable.html')
+    
     @app.route('/snake')
     def snake():
         return render_template('snake.html')
