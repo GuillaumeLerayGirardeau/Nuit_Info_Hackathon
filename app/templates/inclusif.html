@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NIRD - Inclusif</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style_responsable.css') }}">
+</head>
+<body>
+    <div id="background_image">
+        <img src="{{ url_for('static', filename='images/background.png') }}" id="computer_bg" alt="Ordinateur">
+        <div id="container">
+            {% include 'header.html' %}
+            <main>
+                <div>
+                    <h1>Inclusif</h1>
+                </div>
+                <div>
+                    <p>
+                        Aujourd'hui, l'accès à la technologie ne devrait plus être un luxe. Dans un monde où tout se 
+                        digitalise, il est impératif pour tous d'être acteur de la démocratisation des usages du numérique - 
+                        que dis-je, du numérique responsable !
+                    </p> 
+                    <p>
+                        Et cela passe par de nombreux critéres : utilisation de licences libres et ouvertes à toutes et tous,
+                        participation collective entre enseignants et élèves, accessibilité universelle à des outils informatiques
+                        reconditionnés... <br> Les exemples sont nombreux !
+                    </p>
+
+                    <h3>Et vous dans tous ça ?</h3>
+
+                    <p>
+                        Vous pouvez vous aussi contribuer à l'accessibilité de l'informatique autour de vous ! La prochaine fois que 
+                        votre pc electronique tombe en panne ou que votre ordianteur comme à être trop lent à votre goût, pensez aux
+                        solutions alternatives et donner-lui une seconde vie avec Linux et les logiciels libres !
+                    </p>
+
+            </main>
+        {% include 'footer.html' %}
+        </div>
+    </div>
+    <script type="module" src="{{ url_for('static', filename='js/scripts_responsable.js') }}"></script>
+</body>
+</html>
