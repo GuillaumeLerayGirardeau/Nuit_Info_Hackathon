@@ -3,11 +3,63 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <title>NIRD - Home</title>
 </head>
 <body>
-    {% include 'header.html' %}
-    <p>Le site marche !</p>
+    <div id="background_image">
+        <img src="{{ url_for('static', filename='images/background.png') }}" id="computer_bg" alt="Ordinateur">
+        <div id="container">
+            {% include 'header.html' %}
+            <main>
+                <div class="center_title">
+                    <h2>La démarche</h2>
+                    <h2 class="rainbow_text">
+                        <span style="color: #2596be">N</span>
+                        <span style="color: #d164c3">I</span>
+                        <span style="color: #e88aa6">R</span>
+                        <span style="color: #f9ce59">D</span>
+                    </h2>
+                </div>
+                <div>
+                    <article>
+                        <p>Bienvenue, <b>toi</b> ! Oui, toi qui utilise un ordinateur, un téléphone, et sûrement tout un tas d'autres appareils
+                            électroniques !</p>
+
+                        <p>Savais-tu qu'il était possible d'avoir un comportement responsable dans l'utilisation de ces 
+                            outils ?</p> 
+
+                        <p>Non ?</p>
+
+                        <p>Dans ce cas, laisse moi te présenter la démarche NIRD !</p>
+                        <hr>
+                    </article>
+
+                    <article>
+                        <h3>Mais c'est quoi, la démarche NIRD ?</h3>
+
+                        <p>Adopter la démarche NIRD, c'est s'engager à un avenir 
+                            <b style="color: #2596be">Numérique</b> plus 
+                            <b style="color: #d164c3">Inclusif</b> , 
+                            <b style="color: #e95b85">Responsable</b> et 
+                            <b style="color: #daa71b">Durable</b>.
+                        </p>
+                        <h3>Concrètement, ça veut dire quoi ?</h3>
+                        <p>Lutter contre des machines rendu obsolètes alors qu'elles fonctionnent encore, favoriser
+                            l'open-source aux licences hors de prix, ouvrir les portes du numérique au plus grand nombre
+                            sans discrimination... C'est tout ça, être NIRD !
+                        </p>
+                        <p>
+                            Tu peux découvrir quelques-une des multiples facettes de cette manière d'aborder le numérique 
+                            avec ce site, en visitant les différentes pages remplies de mini-jeux et de secrets !
+                        </p>
+                    </article>
+                </div>
+        
+            </main>
+            {% include 'footer.html' %}
+        </div>
+    </div>
     <script src="{{ url_for('static', filename='js/scripts.js') }}"></script>
 </body>
 </html>
