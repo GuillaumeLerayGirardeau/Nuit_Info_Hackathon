@@ -30,6 +30,10 @@ def create_app():
     def responsable():
         return render_template('responsable.html')
     
+    @app.route('/inclusif')
+    def inclusif():
+        return render_template('inclusif.html')
+    
     @app.route('/snake')
     def snake():
         return render_template('snake.html')

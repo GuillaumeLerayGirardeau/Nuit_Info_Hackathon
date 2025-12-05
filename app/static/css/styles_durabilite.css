@@ -89,10 +89,12 @@ footer {
 
 /*Elements specifiques de la page en dessous*/
 
-h2 {
+h1, h2, h3, h4 {
     margin-top: 10px;
+    text-align: center;
+    margin: 1rem;
+    padding: 1rem;
 }
-
 
 #game {
     width: 300px;
