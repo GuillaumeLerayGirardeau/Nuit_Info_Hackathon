@@ -36,3 +36,25 @@ reparation.addEventListener("drop", (e) => {
   reparation.classList.remove("over");
   section.classList.add("visible");
 });
+
+// Question
+
+document.getElementById("validate").addEventListener("click", () => {
+  const answer = document.getElementById("user_answer").value.trim().toLowerCase();
+  const feedback = document.getElementById("feedback");
+
+  if (answer === "snake") {
+    let snake = document.getElementById("snake");
+    snake.classList.remove('hidden');
+    snake.classList.add('visible');
+  } else if (answer === "linux") {
+    feedback.textContent = "Bravo, tu as trouvé la bonne réponse !";
+    feedback.style.color = "green";
+  }
+  
+  else {
+    feedback.textContent = "Mauvaise réponse, essaie encore...";
+    feedback.style.color = "red";
+  }
+});
+
