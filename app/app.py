@@ -35,3 +35,5 @@ def create_app():
         return render_template('snake.html')
 
     return app
+
+app = create_app()
