@@ -5,6 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NIRD - Durabilite</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style_responsable.css') }}">
+    <script type="importmap">
+    {
+    "imports": {
+        "three": "https://cdn.jsdelivr.net/npm/three@v0.180.0/build/three.module.js",
+        "three/addons/": "https://cdn.jsdelivr.net/npm/three@v0.180.0/examples/jsm/"
+        }
+    }
+    </script>
 </head>
 <body>
     <div id="background_image">
@@ -53,13 +61,21 @@
                         modélisation 3D. 
                     </p>
                     <p>
-                        Pourquoi ne pas essayer de visualiser un objet 3D sur cet ordinateur ? <br> Allez-y, trouver un objet 3D sur
-                        internet et glisser-le dans la fenêtre ci-dessous !
+                        Pourquoi ne pas essayer de visualiser un objet 3D sur cet ordinateur ? <br> Allez, trouve un objet 3D en STL sur
+                        internet et ouvre-le ci-dessous !
                     </p>
+                </div>
+
+                <section id="viewer_section">
+                    <input type="file" id="stl_file" accept=".stl">
+                    <div id="viewer_stl"></div>
+                    <div id="stl_data"></div>
+                </section>
+
             </main>
-            {% include 'footer.html' %}
+        {% include 'footer.html' %}
         </div>
     </div>
-    <script src="{{ url_for('static', filename='js/scripts_durabilite.js') }}"></script>
+    <script type="module" src="{{ url_for('static', filename='js/scripts_responsable.js') }}"></script>
 </body>
 </html>
